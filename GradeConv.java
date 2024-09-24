@@ -16,15 +16,20 @@ public class GradeConv
         System.out.println("Enter a letter grade, ensure it's uppercase: ");
         String grade = keyboard.nextLine(); 
         String letter=grade.substring(0,1);
-        String sign = grade.substring(1,2);
-        double numValue;
+        if(grade.length() == 2){
+            String sign = grade.substring(1,2);
+        }
+        
+        System.out.println(sign);
+        
+        double numValue = 0;
         
         System.out.println(letter);
-        if (letter == "A")
-               numValue = 4;
-        if(letter == "B")
+        if (letter.equals("A "))
+               numValue = 4.0;
+        if(letter.equals("B"))
             numValue = 3;
-        if(letter == "C")
+        if(letter.equals("C"))
             numValue = 2;
         if(letter == "D")
             numValue = 1;
