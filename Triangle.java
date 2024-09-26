@@ -1,10 +1,9 @@
 import java.util.Scanner;
 import java.text.*;
 /**
- * Write a description of class Triangle here.
- *
- * @author (your name)
- * @version (a version number or a date)
+Neel Samal
+Triangle program
+9/26
  */
 public class Triangle
 {
@@ -22,7 +21,7 @@ public class Triangle
             System.out.println("Enter Side 3 :");
             int Side3 = keyboard.nextInt();
             
-            if(Side1+Side2>Side3 || Side1+Side3>Side2 || Side2+Side3>Side1){
+            if(Side1+Side2>Side3 || Side1+Side3>Side2 || Side2+Side3>Side1){//checks if sides are proper
                 if(Side1==Side2 && Side1==Side3 && Side2==Side3){
                     System.out.println("The triangle is equilateral");
                 } else if(Side1==Side2 || Side1 == Side3 || Side2 == Side3){
@@ -43,7 +42,20 @@ public class Triangle
             System.out.println("Enter Angle 2 :");
             int Angle2 = keyboard.nextInt();
             System.out.println("Enter Angle 3 :");
-            int Angle3 = keyboard.nextInt();}
+            int Angle3 = keyboard.nextInt();
+            if(Angle1+Angle2+Angle3 == 180)//checks angles to verify it's a triangle
+            {
+                if(Angle1 == Angle2 && Angle2 == Angle3)
+                    System.out.println("The triangle is equilaterial");
+                else if(Angle1 == Angle2 ||Angle1 == Angle3 || Angle2 == Angle3)
+                    System.out.println("The triangle is iscoscles");
+                else if(Angle1 == 90 || Angle2 == 90 || Angle3 == 90)
+                    System.out.println("This is a right triangle");
+                
+            }
+            else
+                System.out.println("Invalid angle measures");
+            }
         
             
         
