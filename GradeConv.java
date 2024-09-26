@@ -15,32 +15,36 @@ public class GradeConv
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Enter a letter grade, ensure it's uppercase: ");
         String grade = keyboard.nextLine(); 
-        String letter=grade.substring(0,1);
+        
+        String letter = grade.substring(0,1);
+        String sign = "";
+        
         if(grade.length() == 2)
-           String sign = grade.substring(1,2);
+            sign = grade.substring(1,2);
             
        
         
         double numValue = 0;
         
-        System.out.println(letter);
+        
         if (letter.equals("A"))
-            numValue = 4.0;
+            numValue = numValue+ 4.0;
         else if(letter.equals("B"))
-            numValue = 3;
+            numValue = numValue+3.0;
         else if(letter.equals("C"))
-            numValue = 2;
+            numValue = numValue+2.0;
         else if(letter.equals("D"))
-            numValue = 1;
+            numValue = numValue+1.0;
         else if(letter.equals("F"));
-            numValue = 0;
-        if(sign == "+")
-             if (letter =="A"||letter == "F")
+            numValue = numValue+0.0;
+            
+        if(sign.equals("+"))
+             if (letter.equals("A")||letter.equals("F"))
                  numValue = numValue+0;
              else
                  numValue = numValue +0.3;
-        else if(sign == "-")
-           if(letter == "F")
+        else if(sign.equals("-"))
+           if(letter.equals("F"))
                numValue = numValue-0;
            else
               numValue = numValue -0.3;
