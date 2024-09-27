@@ -54,7 +54,8 @@ public class PlanetProgram
                 System.out.println("Your weight on neptune is :" +format.format(( weight*1.19))+ " pounds." );
                 break;
                 
-            
+            default:
+                System.out.println("Incorrect Input ");
         }
         
         
