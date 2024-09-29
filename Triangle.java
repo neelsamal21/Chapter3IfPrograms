@@ -21,7 +21,7 @@ public class Triangle
             System.out.println("Enter Side 3 :");
             int Side3 = keyboard.nextInt();
             
-            if(Side1+Side2>Side3 || Side1+Side3>Side2 || Side2+Side3>Side1){//checks if sides are proper
+            if(Side1+Side2>Side3 && Side1+Side3>Side2 && Side2+Side3>Side1){//checks if sides are proper
                 if(Side1==Side2 && Side1==Side3 && Side2==Side3){
                     System.out.println("The triangle is equilateral");
                 } else if(Side1==Side2 || Side1 == Side3 || Side2 == Side3){
@@ -54,7 +54,7 @@ public class Triangle
                 
             }
             else
-                System.out.println("Invalid angle measures");
+                System.out.println("Invalid angle measures");//tells user the angles are not accurate
             }
         
             
