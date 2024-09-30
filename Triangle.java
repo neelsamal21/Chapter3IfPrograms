@@ -43,7 +43,7 @@ public class Triangle
             int Angle2 = keyboard.nextInt();
             System.out.println("Enter Angle 3 :");
             int Angle3 = keyboard.nextInt();
-            if(Angle1+Angle2+Angle3 == 180)//checks angles to verify it's a triangle
+            if(Angle1+Angle2+Angle3 == 180 && (Angle1>0 && Angle2>0 && Angle3>0))//checks angles to verify it's a triangle, also makes sure each angle is at least 1
             {
                 if(Angle1 == Angle2 && Angle2 == Angle3)
                     System.out.println("The triangle is equilaterial");
